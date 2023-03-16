@@ -19,10 +19,7 @@ public class Student {
        this.marks2 = marks2;
        this.marks3 = marks3;
    }
-
-   //Methods
-
-
+   
     public int getRollNumber() {
         return rollNumber;
     }

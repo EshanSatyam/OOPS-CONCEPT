@@ -46,8 +46,20 @@ public class SavingsAccount extends Account {
             System.out.println("Cannot complete process. Please enter valid amount");
         }else {
             setBalance(getBalance() + amount);
-            System.out.println("Deposit Successfully");
+            System.out.println("Deposit Successful");
             System.out.println("Current Balance: " + getBalance());
+        }
+    }
+
+    //Method for Fixed Deposit
+
+    public void fixedDeposit(double amount, int years, double interestRate) {
+        if (amount <= 0 || years <= 0 || interestRate <= 0) {
+            System.out.println("Invalid Operations. Please enter valid values for amount, years, and interest rate.");
+        } else {
+            double maturityAmount = amount * Math.pow((1 + interestRate / 100), years);
+            setBalance(getBalance() + maturityAmount);
+            System.out.println("Fixed deposit successful. Maturity amount: " + maturityAmount + ", Current balance: " + getBalance());
         }
     }
 }

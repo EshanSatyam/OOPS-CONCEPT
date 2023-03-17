@@ -7,7 +7,7 @@ public class Account {
     private String address;
     private int phoneNo;
     private int dob;
-    private int balance;
+    private double balance;
 
     public Account(int accountNO, String name, String address, int phoneNo,
                    int dob, int balance){
@@ -59,11 +59,11 @@ public class Account {
         this.dob = dob;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 

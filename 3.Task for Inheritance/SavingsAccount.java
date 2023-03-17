@@ -23,5 +23,32 @@ public class SavingsAccount extends Account {
 
         return getBalance()*interestRate/100;
     }
+
+    //method for withdraw
+
+    public void withdraw(double amount){
+
+        if (amount <= 0){
+            System.out.println("Please enter valid Amount");
+        } else if (amount > getBalance()) {
+            System.out.println("Sorry! You are having Insufficient Balance");
+        }else {
+            setBalance(getBalance() - amount);
+            System.out.println("Withdrawal Successful!");
+            System.out.println("Current Balance: " + getBalance());
+        }
+    }
+
+    //method for Deposit
+
+    public void Deposit(double amount){
+        if (amount <= 0){
+            System.out.println("Cannot complete process. Please enter valid amount");
+        }else {
+            setBalance(getBalance() + amount);
+            System.out.println("Deposit Successfully");
+            System.out.println("Current Balance: " + getBalance());
+        }
+    }
 }
 
